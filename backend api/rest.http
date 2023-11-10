@@ -1,0 +1,12 @@
+###
+GET http://localhost:8000/api/v1/
+Content-Type: application/json
+
+{
+    "task": "doing",
+
+    "hour": 10,
+
+    "type": "entry"
+}
+
