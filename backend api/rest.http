@@ -9,4 +9,28 @@ Content-Type: application/json
 
     "type": "entry"
 }
+###
+POST  http://localhost:8000/api/v1/
+Content-Type: application/json
+
+{
+    "task": "doing",
+
+    "hour": 10,
+
+    "type": "entry"
+}
+
+### patch method
+PATCH http://localhost:8000/api/v1/
+Content-Type: application/json
+
+{
+    "task": "doing",
+
+    "hour": 2,
+
+    "type": "bad"
+}
+
 

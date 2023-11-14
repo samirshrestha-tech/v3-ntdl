@@ -10,6 +10,7 @@ const taskSchema = new mongoose.Schema({
 
   hour: {
     type: Number,
+    required: true,
   },
 
   type: {
