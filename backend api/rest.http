@@ -14,9 +14,9 @@ POST  http://localhost:8000/api/v1/
 Content-Type: application/json
 
 {
-    "task": "doing",
+    "task": "reading",
 
-    "hour": 10,
+    "hour": 2,
 
     "type": "entry"
 }
@@ -26,7 +26,7 @@ PATCH http://localhost:8000/api/v1/
 Content-Type: application/json
 
 {
-    "task": "doing",
+    "task": "reading",
 
     "hour": 2,
 

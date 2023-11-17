@@ -14,3 +14,7 @@ export const getTask = (obj) => {
 export const updateTask = (_id, data) => {
   return taskSchema.findByIdAndUpdate(_id, data, { new: true });
 };
+
+export const deleteTask = (_id) => {
+  return taskSchema.findByIdAndDelete(_id);
+};

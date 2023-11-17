@@ -32,10 +32,10 @@ router.patch("/", async (req, res) => {
 
   console.log(req.body);
 
-  const updatedTasklist = await updateTask(_id, { type });
-  console.log(updatedTasklist);
+  const result = await updateTask(_id, { type });
+  console.log(result);
 
-  updatedTasklist?._id
+  result?._id
     ? res.json({
         status: "success",
         message: "task has been updated",
