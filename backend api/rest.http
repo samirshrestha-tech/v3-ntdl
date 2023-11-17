@@ -16,7 +16,7 @@ Content-Type: application/json
 {
     "task": "reading",
 
-    "hour": 2,
+    "hour": 3,
 
     "type": "entry"
 }
@@ -32,5 +32,10 @@ Content-Type: application/json
 
     "type": "bad"
 }
+
+### delete method
+
+DELETE  http://localhost:8000/api/v1/
+Content-Type: application/json
 
 

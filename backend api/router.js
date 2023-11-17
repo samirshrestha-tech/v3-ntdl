@@ -1,6 +1,6 @@
 // import { Router } from "express";
 import express from "express";
-import { addTask, getTask, updateTask } from "./model/Taskmodel.js";
+import { addTask, deleteTask, getTask, updateTask } from "./model/Taskmodel.js";
 
 // import router from "router";
 
@@ -43,6 +43,21 @@ router.patch("/", async (req, res) => {
     : res.json({
         status: "error",
         message: "the task cannot be updated",
+      });
+});
+
+router.delete("/:_id", async (req, res) => {
+  const result = await deleteTask(_id);
+
+  console.log(result);
+  result?._id
+    ? res.json({
+        status: "success",
+        message: " the task has been successfully deleted",
+      })
+    : res.json({
+        status: "error",
+        message: " the task could not be  successfully deleted",
       });
 });
 
