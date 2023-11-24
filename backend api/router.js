@@ -50,7 +50,7 @@ router.delete("/:_id", async (req, res) => {
   const result = await deleteTask(_id);
 
   console.log(result);
-  result?._id
+  result?.deletedCount
     ? res.json({
         status: "success",
         message: " the task has been successfully deleted",
