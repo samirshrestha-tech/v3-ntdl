@@ -46,7 +46,10 @@ router.patch("/", async (req, res) => {
       });
 });
 
-router.delete("/:_id", async (req, res) => {
+router.delete("/", async (req, res) => {
+  const { _id } = req.params;
+
+  console.log(_id);
   const result = await deleteTask(_id);
 
   console.log(result);

@@ -26,16 +26,20 @@ PATCH http://localhost:8000/api/v1
 Content-Type: application/json
 
 {
-    "task": "reading",
+    "_id": "65576d5b4284099e614b55e4",
 
-    "hour": 2,
-
-    "type": "entry"
+    "type": "bad"
 }
 
 ### delete method
 
-DELETE  http://localhost:8000/api/v1/: 
+DELETE  http://localhost:8000/api/v1/
 Content-Type: application/json
+
+{
+    "_id": "65576d5b4284099e614b55e4"
+
+    
+}
 
 

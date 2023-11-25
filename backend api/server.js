@@ -1,6 +1,7 @@
 import express, { Router } from "express";
 import taskRouter from "./router.js";
 import { connectDb } from "./config/dbconfig.js";
+import cors from "cors";
 
 // using express library for creating an api
 
@@ -11,6 +12,8 @@ connectDb();
 
 // middleware for using express json
 app.use(express.json());
+
+app.use(cors());
 
 const PORT = 8000;
 // importing the router
