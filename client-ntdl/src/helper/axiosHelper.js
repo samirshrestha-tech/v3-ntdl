@@ -10,3 +10,12 @@ export const postTasks = async (obj) => {
     console.log(error);
   }
 };
+
+export const getTasks = async () => {
+  try {
+    const data = await axios.get(apiEndPoint);
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};

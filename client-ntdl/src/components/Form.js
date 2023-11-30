@@ -6,7 +6,7 @@ const initialState = {
   hr: "",
 };
 
-export const Form = ({ setResp }) => {
+export const Form = ({ setResp, resp, fetchTasks }) => {
   const [form, setForm] = useState(initialState);
 
   const handleOnChange = (e) => {
@@ -24,17 +24,18 @@ export const Form = ({ setResp }) => {
 
     // call the api
 
-    const data = await postTasks(form);
-    setResp(data);
+    const result = await postTasks(form);
+    setResp(result);
 
-    if (data?.status === "success") {
+    if (result?.data?.status === "success") {
       setForm(initialState);
+      fetchTasks();
     }
   };
   return (
     <>
       <form
-        class="d-flex justify-content-center gap-3 m-5 border border-warning p-5 "
+        className="d-flex justify-content-center gap-3 m-5 border border-warning p-5 "
         onSubmit={handleOnSubmit}
       >
         <div class="mb-3 d-flex gap-3 justify-content-center align-items-center  ">
@@ -45,6 +46,7 @@ export const Form = ({ setResp }) => {
             class="form-control"
             placeholder="Tasks"
             onChange={handleOnChange}
+            value={form.task}
             required
           />
         </div>
@@ -56,6 +58,7 @@ export const Form = ({ setResp }) => {
             class="form-control"
             placeholder="Hours allocated"
             onChange={handleOnChange}
+            value={form.hr}
             required
           />
         </div>
