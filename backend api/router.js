@@ -18,11 +18,16 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
   const tasklist = await addTask(req.body);
-  console.log(tasklist);
-  res.json({
-    status: "success",
-    message: "task has been added",
-  });
+
+  tasklist?._id
+    ? res.json({
+        status: "success",
+        message: "Task has been added successfully",
+      })
+    : res.json({
+        status: "error",
+        message: "Sorry the task couldn't be added successfully",
+      });
 });
 
 // patch method for updating the task type by comparing the id against the existing
