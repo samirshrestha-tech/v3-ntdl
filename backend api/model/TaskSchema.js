@@ -12,10 +12,6 @@ const taskSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-
-  type: {
-    type: String,
-  },
 });
 
 export default mongoose.model("Task", taskSchema);
