@@ -12,6 +12,10 @@ const taskSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  type: {
+    type: String,
+    default: "entry",
+  },
 });
 
 export default mongoose.model("Task", taskSchema);

@@ -26,7 +26,7 @@ PATCH http://localhost:8000/api/v1
 Content-Type: application/json
 
 {
-    "_id": "65576d5b4284099e614b55e4",
+    "_id": "656ae8ff2b84b363596fd594",
 
     "type": "bad"
 }
