@@ -3,6 +3,7 @@ import "./App.css";
 import { Form } from "./components/Form";
 import { Message } from "./components/Message";
 import { getTasks } from "./helper/axiosHelper";
+import { Tables } from "./components/Tables";
 
 const App = () => {
   const [resp, setResp] = useState({});
@@ -32,6 +33,7 @@ const App = () => {
       <Form setResp={setResp} resp={resp} fetchTasks={fetchTasks} />
 
       {/* lists of the collected tasks */}
+      <Tables taskLists={taskLists} fetchTasks={fetchTasks} />
 
       {/* Entry List */}
 

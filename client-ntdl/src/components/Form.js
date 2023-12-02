@@ -47,6 +47,7 @@ export const Form = ({ setResp, resp, fetchTasks }) => {
             placeholder="Tasks"
             onChange={handleOnChange}
             value={form.task}
+            minLength={5}
             required
           />
         </div>

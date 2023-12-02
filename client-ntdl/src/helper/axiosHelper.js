@@ -19,3 +19,12 @@ export const getTasks = async () => {
     console.log(error);
   }
 };
+
+export const switchTasks = async (obj) => {
+  try {
+    const data = await axios.patch(apiEndPoint, obj);
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
