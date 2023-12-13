@@ -45,6 +45,7 @@ router.patch("/", async (req, res) => {
     ? res.json({
         status: "success",
         message: "task has been updated",
+        result,
       })
     : res.json({
         status: "error",
