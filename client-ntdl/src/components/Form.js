@@ -24,10 +24,10 @@ export const Form = ({ setResp, resp, fetchTasks }) => {
 
     // call the api
 
-    const result = await postTasks(form);
-    setResp(result);
+    const data = await postTasks(form);
+    setResp(data);
 
-    if (result?.data?.status === "success") {
+    if (data?.status === "success") {
       setForm(initialState);
       fetchTasks();
     }

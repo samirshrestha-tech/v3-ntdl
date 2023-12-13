@@ -15,7 +15,6 @@ const App = () => {
     if (data.status === "success") {
       setTask(data.tasklist);
     }
-
     console.log(taskLists);
   };
   useEffect(() => {
@@ -36,7 +35,7 @@ const App = () => {
       <Form setResp={setResp} resp={resp} fetchTasks={fetchTasks} />
 
       {/* lists of the collected tasks */}
-      <Tables taskLists={taskLists} fetchTasks={fetchTasks} />
+      <Tables taskLists={taskLists} fetchTasks={fetchTasks} setResp={setResp} />
 
       {/* Entry List */}
 
