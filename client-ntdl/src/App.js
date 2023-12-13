@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./App.css";
 import { Form } from "./components/Form";
 import { Message } from "./components/Message";
@@ -18,6 +18,9 @@ const App = () => {
 
     console.log(taskLists);
   };
+  useEffect(() => {
+    fetchTasks();
+  }, []);
 
   return (
     <div>

@@ -5,7 +5,11 @@ export const Tables = ({ taskLists, fetchTasks }) => {
   const entryArr = taskLists.filter((item) => item.type === "entry");
   const badArr = taskLists.filter((item) => item.type === "bad");
 
-  const handleOnSwitch = () => {};
+  const handleOnSwitch = async (_id, type) => {
+    const data = await switchTasks({ _id, type });
+
+    console.log(data);
+  };
   return (
     <div className="entry list">
       <div>
@@ -23,8 +27,11 @@ export const Tables = ({ taskLists, fetchTasks }) => {
                 <td className="ml-2">{task}</td>
                 <td>{hr} hr</td>
                 <td className="text-end">
-                  <button onClick={handleOnSwitch} className="btn btn-success">
-                    <i class="fa-solid fa-arrow-right"></i>
+                  <button
+                    onClick={() => handleOnSwitch(_id, "bad")}
+                    className="btn btn-success"
+                  >
+                    <i class="fa-solid fa-arrow-left"></i>
                   </button>
                 </td>
               </tr>
